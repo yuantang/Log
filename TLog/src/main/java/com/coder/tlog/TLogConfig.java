@@ -132,7 +132,6 @@ public class TLogConfig {
         private int cacheDays;
 
         public Builder(Context context) {
-
             if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
                 dir= Environment.getExternalStorageDirectory().getAbsolutePath()+ File.separator + context.getPackageName()+"_log" + File.separator;
             } else if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) && context.getExternalCacheDir() != null)
